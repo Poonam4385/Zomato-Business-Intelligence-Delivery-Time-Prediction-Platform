@@ -1,0 +1,7 @@
+{
+  "rows": 13256,
+  "target_non_null": 13256,
+  "cross_city_customer_restaurant_pct": 95.81,
+  "cross_city_restaurant_partner_pct": 95.89,
+  "distance_feature_available": false
+}

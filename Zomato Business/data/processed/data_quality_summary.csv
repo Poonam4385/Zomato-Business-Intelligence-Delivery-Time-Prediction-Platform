@@ -1,0 +1,13 @@
+table,raw_rows,duplicate_key_rows,clean_rows,rows_removed,invalid_age_rows,unknown_city_rows,total_orders_mismatch_rows,invalid_rating_rows,negative_average_cost_rows,negative_price_rows,negative_prep_time_rows,orphan_restaurant_rows,reversed_date_rows,orphan_customer_rows,orphan_partner_rows,delivery_time_outlier_rows,negative_FoodCost_rows,negative_DeliveryFee_rows,negative_Discount_rows,negative_GST_rows,negative_FinalAmount_rows,invalid_coupon_rows,final_amount_recomputed_rows,financially_impossible_rows,invalid_quantity_rows,invalid_unit_price_rows,total_price_recomputed_rows,orphan_food_rows,orphan_order_rows,invalid_CustomerRating_rows,invalid_DeliveryRating_rows,invalid_FoodRating_rows,missing_or_unknown_city_rows
+cities,25,0,25,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+customers,12180,180,11982,198,258.0,18.0,11472.0,,,,,,,,,,,,,,,,,,,,,,,,,,
+restaurants,1200,0,1198,2,,2.0,,18.0,15.0,,,,,,,,,,,,,,,,,,,,,,,,
+menu,8997,0,8982,15,,,,,,90.0,0.0,15.0,,,,,,,,,,,,,,,,,,,,,
+delivery_partners,2000,0,1998,2,0.0,2.0,,0.0,,,,,,,,,,,,,,,,,,,,,,,,,
+promotions,300,0,300,0,,,,,,,,,24.0,,,,,,,,,,,,,,,,,,,,
+orders,20705,205,20377,328,,,,,,,,47.0,,51.0,25.0,352.0,177.0,0.0,0.0,0.0,0.0,0.0,20037.0,244.0,,,,,,,,,
+order_items,42378,0,41760,618,,,,,,,,,,,,,,,,,,,,,417.0,0.0,429.0,67.0,134.0,,,,
+payments,20493,0,20371,122,,,,,,,,,,,,,,,,,,,,,,,,,122.0,,,,
+customer_feedback,14200,0,14109,91,,,,,,,,,,,,,,,,,,,,,,,,,91.0,0.0,129.0,0.0,
+weather,18264,0,18173,91,,,,,,,,,,,,,,,,,,,,,,,,,,,,,91.0
+traffic,18335,0,18335,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0

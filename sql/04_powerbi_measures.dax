@@ -1,0 +1,52 @@
+-- Create these measures in Power BI after importing orders and related dimensions.
+
+Total Orders = DISTINCTCOUNT(orders[OrderID])
+
+Completed Orders =
+CALCULATE(
+    DISTINCTCOUNT(orders[OrderID]),
+    orders[OrderStatus] IN {"Delivered", "Delivered Late"}
+)
+
+Completed Revenue =
+CALCULATE(
+    SUM(orders[FinalAmount]),
+    orders[OrderStatus] IN {"Delivered", "Delivered Late"}
+)
+
+Average Order Value = DIVIDE([Completed Revenue], [Completed Orders])
+
+Cancelled Orders =
+CALCULATE(
+    DISTINCTCOUNT(orders[OrderID]),
+    orders[OrderStatus] = "Cancelled"
+)
+
+Cancellation Rate % = DIVIDE([Cancelled Orders], [Total Orders], 0) * 100
+
+Late Orders =
+CALCULATE(
+    DISTINCTCOUNT(orders[OrderID]),
+    orders[OrderStatus] = "Delivered Late"
+)
+
+Late Delivery Rate % = DIVIDE([Late Orders], [Completed Orders], 0) * 100
+
+Average Delivery Minutes =
+CALCULATE(
+    AVERAGE(orders[DeliveryTimeMinutes]),
+    orders[OrderStatus] IN {"Delivered", "Delivered Late"}
+)
+
+Average Customer Rating = AVERAGE(customer_feedback[CustomerRating])
+
+Revenue Previous Month =
+CALCULATE([Completed Revenue], DATEADD('Calendar'[Date], -1, MONTH))
+
+MoM Revenue Growth % =
+DIVIDE([Completed Revenue] - [Revenue Previous Month], [Revenue Previous Month], 0) * 100
+
+Coupon Orders =
+CALCULATE([Total Orders], NOT(ISBLANK(orders[CouponCode])))
+
+Coupon Usage Rate % = DIVIDE([Coupon Orders], [Total Orders], 0) * 100

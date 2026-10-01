@@ -1,0 +1,111 @@
+{
+  "cities": {
+    "raw_rows": 25,
+    "duplicate_key_rows": 0,
+    "clean_rows": 25,
+    "rows_removed": 0
+  },
+  "customers": {
+    "raw_rows": 12180,
+    "duplicate_key_rows": 180,
+    "invalid_age_rows": 258,
+    "unknown_city_rows": 18,
+    "total_orders_mismatch_rows": 11472,
+    "clean_rows": 11982,
+    "rows_removed": 198
+  },
+  "restaurants": {
+    "raw_rows": 1200,
+    "duplicate_key_rows": 0,
+    "invalid_rating_rows": 18,
+    "negative_average_cost_rows": 15,
+    "unknown_city_rows": 2,
+    "clean_rows": 1198,
+    "rows_removed": 2
+  },
+  "menu": {
+    "raw_rows": 8997,
+    "duplicate_key_rows": 0,
+    "negative_price_rows": 90,
+    "negative_prep_time_rows": 0,
+    "orphan_restaurant_rows": 15,
+    "clean_rows": 8982,
+    "rows_removed": 15
+  },
+  "delivery_partners": {
+    "raw_rows": 2000,
+    "duplicate_key_rows": 0,
+    "invalid_age_rows": 0,
+    "invalid_rating_rows": 0,
+    "unknown_city_rows": 2,
+    "clean_rows": 1998,
+    "rows_removed": 2
+  },
+  "promotions": {
+    "raw_rows": 300,
+    "duplicate_key_rows": 0,
+    "reversed_date_rows": 24,
+    "clean_rows": 300,
+    "rows_removed": 0
+  },
+  "orders": {
+    "raw_rows": 20705,
+    "duplicate_key_rows": 205,
+    "orphan_customer_rows": 51,
+    "orphan_restaurant_rows": 47,
+    "orphan_partner_rows": 25,
+    "delivery_time_outlier_rows": 352,
+    "negative_FoodCost_rows": 177,
+    "negative_DeliveryFee_rows": 0,
+    "negative_Discount_rows": 0,
+    "negative_GST_rows": 0,
+    "negative_FinalAmount_rows": 0,
+    "invalid_coupon_rows": 0,
+    "final_amount_recomputed_rows": 20037,
+    "financially_impossible_rows": 244,
+    "clean_rows": 20377,
+    "rows_removed": 328
+  },
+  "order_items": {
+    "raw_rows": 42378,
+    "duplicate_key_rows": 0,
+    "invalid_quantity_rows": 417,
+    "invalid_unit_price_rows": 0,
+    "total_price_recomputed_rows": 429,
+    "orphan_food_rows": 67,
+    "orphan_order_rows": 134,
+    "clean_rows": 41760,
+    "rows_removed": 618
+  },
+  "payments": {
+    "raw_rows": 20493,
+    "duplicate_key_rows": 0,
+    "orphan_order_rows": 122,
+    "clean_rows": 20371,
+    "rows_removed": 122
+  },
+  "customer_feedback": {
+    "raw_rows": 14200,
+    "duplicate_key_rows": 0,
+    "invalid_CustomerRating_rows": 0,
+    "invalid_DeliveryRating_rows": 129,
+    "invalid_FoodRating_rows": 0,
+    "orphan_order_rows": 91,
+    "clean_rows": 14109,
+    "rows_removed": 91
+  },
+  "weather": {
+    "raw_rows": 18264,
+    "duplicate_key_rows": 0,
+    "missing_or_unknown_city_rows": 91,
+    "clean_rows": 18173,
+    "rows_removed": 91
+  },
+  "traffic": {
+    "raw_rows": 18335,
+    "duplicate_key_rows": 0,
+    "missing_or_unknown_city_rows": 0,
+    "clean_rows": 18335,
+    "rows_removed": 0
+  }
+}

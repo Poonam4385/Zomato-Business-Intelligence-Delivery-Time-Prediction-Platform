@@ -1,0 +1,98 @@
+{
+  "split": {
+    "train_rows": 10604,
+    "test_rows": 2652,
+    "train_end": "2024-08-06 20:35:00",
+    "test_start": "2024-08-07 10:05:00"
+  },
+  "features": [
+    "FoodCost",
+    "DeliveryFee",
+    "Discount",
+    "GST",
+    "FinalAmount",
+    "OrderHour",
+    "OrderMinute",
+    "Month",
+    "IsWeekend",
+    "IsLunch",
+    "IsDinner",
+    "CustomerAge",
+    "RestaurantRating",
+    "RestaurantAverageCost",
+    "PartnerAge",
+    "PartnerRating",
+    "CompletedDeliveries",
+    "PartnerHistoricalAvgDelivery",
+    "DiscountPercentage",
+    "BasketItemValue",
+    "AvgUnitPrice",
+    "MaxPrepTime",
+    "MeanPrepTime",
+    "WeightedPrepTime",
+    "WeightedCalories",
+    "MenuCategoryCount",
+    "CustomerTenureDays",
+    "PartnerTenureDays",
+    "DiscountPctOfFood",
+    "DeliveryFeePctOfFood",
+    "HasCoupon",
+    "Temperature",
+    "Rainfall",
+    "Humidity",
+    "AverageSpeed",
+    "TrafficTimeDeltaMinutes",
+    "CustomerPriorOrderCount",
+    "CustomerPriorAvgDelivery",
+    "RestaurantPriorOrderCount",
+    "RestaurantPriorAvgDelivery",
+    "PartnerPriorOrderCount",
+    "PartnerPriorAvgDelivery",
+    "CustomerPriorSpend",
+    "CustomerRestaurantCityMismatch",
+    "RestaurantPartnerCityMismatch",
+    "DistanceFeatureAvailable",
+    "PaymentMethod",
+    "Membership",
+    "PreferredCuisine",
+    "RestaurantCuisine",
+    "RestaurantCity",
+    "Area",
+    "RestaurantType",
+    "VehicleType",
+    "DayOfWeek",
+    "WeatherCondition",
+    "TrafficLevel",
+    "CampaignName"
+  ],
+  "models": {
+    "baseline_mean": {
+      "MAE": 11.4511,
+      "RMSE": 14.9176,
+      "R2": -0.0013
+    },
+    "ridge": {
+      "MAE": 11.6498,
+      "RMSE": 15.0857,
+      "R2": -0.024
+    },
+    "random_forest": {
+      "MAE": 11.5725,
+      "RMSE": 15.0044,
+      "R2": -0.013
+    },
+    "extra_trees": {
+      "MAE": 11.5426,
+      "RMSE": 15.0099,
+      "R2": -0.0137
+    }
+  },
+  "best_model": "extra_trees",
+  "best_metrics": {
+    "MAE": 11.5426,
+    "RMSE": 15.0099,
+    "R2": -0.0137
+  },
+  "beats_mean_baseline": false,
+  "prd_target_comment": "The source target has weak observable signal. Treat MAE<5/RMSE<6 as a dataset-quality hypothesis, not a guaranteed model KPI."
+}

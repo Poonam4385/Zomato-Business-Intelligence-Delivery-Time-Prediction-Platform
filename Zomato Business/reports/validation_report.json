@@ -1,0 +1,112 @@
+{
+  "checks": {
+    "cities.pk_unique": {
+      "passed": true,
+      "detail": "duplicate CityID rows=0"
+    },
+    "customers.pk_unique": {
+      "passed": true,
+      "detail": "duplicate CustomerID rows=0"
+    },
+    "restaurants.pk_unique": {
+      "passed": true,
+      "detail": "duplicate RestaurantID rows=0"
+    },
+    "menu.pk_unique": {
+      "passed": true,
+      "detail": "duplicate FoodItemID rows=0"
+    },
+    "delivery_partners.pk_unique": {
+      "passed": true,
+      "detail": "duplicate DeliveryPartnerID rows=0"
+    },
+    "promotions.pk_unique": {
+      "passed": true,
+      "detail": "duplicate PromotionID rows=0"
+    },
+    "orders.pk_unique": {
+      "passed": true,
+      "detail": "duplicate OrderID rows=0"
+    },
+    "order_items.pk_unique": {
+      "passed": true,
+      "detail": "duplicate OrderItemID rows=0"
+    },
+    "payments.pk_unique": {
+      "passed": true,
+      "detail": "duplicate PaymentID rows=0"
+    },
+    "customer_feedback.pk_unique": {
+      "passed": true,
+      "detail": "duplicate FeedbackID rows=0"
+    },
+    "weather.pk_unique": {
+      "passed": true,
+      "detail": "duplicate WeatherID rows=0"
+    },
+    "traffic.pk_unique": {
+      "passed": true,
+      "detail": "duplicate TrafficID rows=0"
+    },
+    "fk.orders.CustomerID": {
+      "passed": true,
+      "detail": "orphan rows=0"
+    },
+    "fk.orders.RestaurantID": {
+      "passed": true,
+      "detail": "orphan rows=0"
+    },
+    "fk.orders.DeliveryPartnerID": {
+      "passed": true,
+      "detail": "orphan rows=0"
+    },
+    "fk.menu.RestaurantID": {
+      "passed": true,
+      "detail": "orphan rows=0"
+    },
+    "fk.order_items.OrderID": {
+      "passed": true,
+      "detail": "orphan rows=0"
+    },
+    "fk.order_items.FoodItemID": {
+      "passed": true,
+      "detail": "orphan rows=0"
+    },
+    "fk.payments.OrderID": {
+      "passed": true,
+      "detail": "orphan rows=0"
+    },
+    "fk.customer_feedback.OrderID": {
+      "passed": true,
+      "detail": "orphan rows=0"
+    },
+    "orders.financial_equation": {
+      "passed": true,
+      "detail": "mismatched rows=0"
+    }
+  },
+  "warnings": [
+    {
+      "name": "cross_city_order_relationships",
+      "value_pct": 99.79,
+      "message": "Synthetic source links many orders across different operational cities. Keep as an audit flag; do not fabricate corrected entity links."
+    },
+    {
+      "name": "ambiguous_order_dates",
+      "count": 4782,
+      "message": "Numeric source dates with both components <=12 are inherently ambiguous; configured parsing policy was applied and flags retained."
+    }
+  ],
+  "summary": {
+    "orders": 20377,
+    "completed_orders": 13481,
+    "completed_revenue": 8785341.95,
+    "date_min": "2023-01-01",
+    "date_max": "2024-12-31"
+  },
+  "test_summary": {
+    "passed": 21,
+    "total": 21,
+    "all_passed": true
+  }
+}

@@ -1,0 +1,39 @@
+project:
+  name: Zomato BI & Delivery Intelligence Platform
+  random_state: 42
+  timezone: Asia/Kolkata
+
+data:
+  raw_dir: data/raw
+  processed_dir: data/processed
+  feature_dir: data/features
+  report_dir: reports
+  model_dir: models
+  ambiguous_date_policy: dayfirst
+  delivery_min_minutes: 5
+  delivery_max_minutes: 180
+  traffic_match_tolerance_minutes: 90
+  strict_city_match_for_model: false
+  authoritative_food_cost: order_items
+
+modeling:
+  delivery_test_fraction: 0.20
+  churn_test_fraction: 0.15
+  churn_validation_fraction: 0.15
+  min_category_frequency: 10
+  n_estimators: 150
+  max_depth: 12
+  min_samples_leaf: 3
+  n_jobs: -1
+  churn_horizon_days: 60
+
+completed_statuses:
+  - Delivered
+  - Delivered Late
+
+city_aliases:
+  Bangalore: Bengaluru
+  Bombay: Mumbai
+  Madras: Chennai
+  New Delhi: Delhi
+  Baroda: Vadodara
